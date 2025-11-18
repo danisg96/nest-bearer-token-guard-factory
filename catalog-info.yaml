@@ -1,3 +1,20 @@
+# Definisci prima il System
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: authentication-system
+  title: Authentication System
+  description: |
+    Collection of authentication and authorization components.
+    This system includes guards, middlewares, and utilities for handling authentication in our applications.
+  tags:
+    - authentication
+    - security
+spec:
+  owner: guests
+
+---
+# Poi il tuo Component
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -32,13 +49,11 @@ metadata:
     - guards
     - typescript
   annotations:
-    # Link diretto al file principale
     github.com/project-slug: danisg96/nest-bearer-token-guard-factory
     backstage.io/source-location: url:https://github.com/danisg96/nest-bearer-token-guard-factory
-    # Puoi aggiungere link alla documentazione
     backstage.io/techdocs-ref: dir:.
 spec:
   type: library
   lifecycle: production
-  owner: guests  # o il tuo username
-  system: authentication-system  # opzionale, per raggruppare componenti
+  owner: guests
+  system: authentication-system  # Ora il system esiste!
