@@ -1,0 +1,6 @@
+site_name: 'NestJS Bearer Guard Documentation'
+nav:
+  - Introduction: index.md
+  - Usage Examples: usage.md
+  
+docs_dir: docs
