@@ -1,6 +1,8 @@
 site_name: 'NestJS Bearer Guard Documentation'
 nav:
   - Introduction: index.md
+  - Guard Code: guard.md
+  - Factory Code: factory.md
   - Usage Examples: usage.md
   
 docs_dir: docs
