@@ -7,14 +7,14 @@ metadata:
     Factory pattern for Bearer token authentication in NestJS.
     
     ## Usage Example:
-```typescript
+    ```typescript
     // At Controller level
     @UseGuards(createBearerAuthGuard('key_path_in_configService'))
     @Get('protected')
     async getProtectedResource() {
       return { message: 'Authorized!' };
     }
-```
+    ```
   links:
     - url: https://github.com/danisg96/nest-bearer-token-guard-factory/blob/main/factories/BearerToken.factory.ts
       title: Factory Source Code
