@@ -7,7 +7,7 @@ metadata:
     Factory pattern for Bearer token authentication in NestJS.
     
     ## Usage Example:
-```    
+```typescript
     // At Controller level
     @UseGuards(createBearerAuthGuard('key_path_in_configService'))
     @Get('protected')
