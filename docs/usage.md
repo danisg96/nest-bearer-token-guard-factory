@@ -11,5 +11,5 @@ const MyBearerGuard = createBearerAuthGuard('api.secret');
 export class AppModule {}
 ```
 
-# Note
+### Note
 'api.secret' is the path of the bearer token in yor configuration injected in ConfigService
