@@ -50,8 +50,8 @@ metadata:
     - typescript
   annotations:
     github.com/project-slug: danisg96/nest-bearer-token-guard-factory
-    backstage.io/source-location: url:https://github.com/danisg96/nest-bearer-token-guard-factory
     backstage.io/techdocs-ref: dir:.
+    demo.backstage.io/techdocs-builder: local
 spec:
   type: library
   lifecycle: production
