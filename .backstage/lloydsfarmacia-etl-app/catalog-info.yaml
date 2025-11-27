@@ -1,0 +1,41 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lloydsfarmacia-etl-app
+  title: Lloydsfarmacia ETL Application
+  description: ETL application for synchronizing product data, prices, stock levels, and promotions between IBS/eFidelity systems and Shopify e-commerce platform
+  annotations:
+    github.com/project-slug: phx-grandslam/lloydsfarmacia-etl-app
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - nodejs
+    - etl
+    - shopify
+    - e-commerce
+    - integration
+    - data-sync
+    - pharmacy
+  links:
+    - url: https://github.com/phx-grandslam/lloydsfarmacia-etl-app
+      title: Repository
+      icon: github
+    - url: https://spotview.atlassian.net/wiki/spaces/RUL/pages/1936195585/Sviluppo+e+avvio+in+locale
+      title: Development Guide
+      icon: docs
+spec:
+  type: service
+  lifecycle: production
+  owner: team:spotview-team
+  system: lloydsfarmacia-ecommerce
+  dependsOn:
+    - component:default/lloydsfarmacia-mp-api
+    - resource:default/postgres-etl-db
+    - resource:default/shopify-api
+    - resource:default/ibs-ftp-server
+    - resource:default/efidelity-ftp-server
+  providesApis:
+    - lloydsfarmacia-etl-webhook-api
+    - lloydsfarmacia-etl-cron-api
+  consumesApis:
+    - shopify-graphql-api
+    - shopify-rest-api

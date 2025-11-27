@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: lloydsfarmacia-etl-components
+  description: Lloydsfarmacia ETL application components
+spec:
+  type: url
+  targets:
+    - ./components/lloydsfarmacia-etl-app/catalog-info.yaml
